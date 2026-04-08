@@ -394,20 +394,37 @@ footer a{color:rgba(255,255,255,.85);}
       0 10px 30px rgba(0,0,0,0.2);
   }
 
-  .player-wrapper::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    background: repeating-linear-gradient(
-      to bottom,
-      rgba(255,255,255,0.04),
-      rgba(255,255,255,0.04) 1px,
-      transparent 2px,
-      transparent 4px
-    );
-    opacity: 0.9;
-  }
+.player-wrapper {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* Make iframe sit below */
+.player-wrapper iframe {
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+/* Force overlay above */
+.player-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.08),
+    rgba(255,255,255,0.08) 1px,
+    transparent 2px,
+    transparent 4px
+  );
+
+  opacity: 0.25;
+}
 
 </style>
 </head>
