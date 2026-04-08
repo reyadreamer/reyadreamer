@@ -434,18 +434,22 @@ footer a{color:rgba(255,255,255,.85);}
         <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
         <span>Media Player — reyadreamer</span>
       </div>
+
       <div class="panel-body">
-        <canvas id="visualizer"></canvas>
-        <div class="progress-wrap" id="progress-wrap"><div class="progress-fill" id="progress-fill"></div></div>
-        <div class="player-controls">
-          <button class="xp-btn" id="btn-prev">⏮</button>
-          <button class="xp-btn" id="btn-play">▶ Play</button>
-          <button class="xp-btn" id="btn-next">⏭</button>
-          <div class="now-playing" id="now-playing">Select a track to begin...</div>
-        </div>
-        <div class="track-list" id="track-list"></div>
+        <iframe 
+          width="100%" 
+          height="166" 
+          scrolling="no" 
+          frameborder="no" 
+          allow="autoplay"
+          src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/reyadreamer">
+        </iframe>
+
         <p style="font-size:10px;color:var(--muted);margin-top:1rem;">
-          Full catalog on <a href="https://soundcloud.com/reyadreamer" style="color:var(--accent)" target="_blank">SoundCloud</a> &amp; <a href="#" style="color:var(--accent)">Bandcamp</a>
+          Full catalog on 
+          <a href="https://soundcloud.com/reyadreamer" style="color:var(--accent)" target="_blank">SoundCloud</a> 
+          &amp; 
+          <a href="#" style="color:var(--accent)">Bandcamp</a>
         </p>
       </div>
     </div>
