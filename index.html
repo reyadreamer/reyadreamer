@@ -383,49 +383,45 @@ footer a{color:rgba(255,255,255,.85);}
 ::-webkit-scrollbar-track{background:rgba(180,220,255,.25);}
 ::-webkit-scrollbar-thumb{background:linear-gradient(180deg,var(--aqua2),var(--green2));border-radius:4px;border:1px solid rgba(255,255,255,.4);}
 .player-wrapper {
-    position: relative;
-    border-radius: 16px;
-    overflow: hidden;
-    background: rgba(255,255,255,0.08);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255,255,255,0.15);
-    box-shadow:
-      0 0 20px rgba(0,180,216,0.15),
-      0 10px 30px rgba(0,0,0,0.2);
-  }
-
-.player-wrapper {
   position: relative;
-  border-radius: 16px;
+  border-radius: 18px;
   overflow: hidden;
+  padding: 10px;
+
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border: 1px solid rgba(255,255,255,0.22);
+
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.08) inset,
+    0 0 24px rgba(72,202,228,0.14),
+    0 0 56px rgba(0,180,216,0.12),
+    0 14px 36px rgba(0,30,60,0.22);
 }
 
-/* Make iframe sit below */
-.player-wrapper iframe {
-  display: block;
-  position: relative;
-  z-index: 1;
-}
-
-/* Force overlay above */
-.player-wrapper::after {
+.player-wrapper::before {
   content: "";
   position: absolute;
   inset: 0;
   pointer-events: none;
-  z-index: 2;
+  border-radius: inherit;
 
-  background: repeating-linear-gradient(
-    to bottom,
-    rgba(255,255,255,0.08),
-    rgba(255,255,255,0.08) 1px,
-    transparent 2px,
-    transparent 4px
-  );
-
-  opacity: 0.25;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255,255,255,0.18), transparent 32%),
+    radial-gradient(circle at 50% 100%, rgba(72,202,228,0.10), transparent 38%);
+  opacity: 0.9;
 }
 
+.player-wrapper iframe {
+  display: block;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  border-radius: 12px;
+}
+  
 </style>
 </head>
 <body>
