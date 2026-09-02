@@ -34,3 +34,4 @@
 .video-meta h3{margin-top:0}
 .watch .video-grid{width:100%;max-width:900px;margin-left:auto;margin-right:auto;gap:1.25rem}.watch .watch-more{display:block;width:100%;max-width:900px;margin-left:auto;margin-right:auto}
 .shows{display:flex;flex-direction:column;align-items:center}.show-heading,.show-status,.show-divider,.show-poster,.past-show-info{width:100%}.shows h2{margin-top:3rem}.show-status{padding:3rem 0 2rem}.show-divider{margin:1rem 0 3rem}.show-poster img{width:min(100%,420px)}.past-show-info{margin-top:2rem}@media(max-width:700px){.watch .video-grid{max-width:430px}.show-status{padding-top:2rem}.show-poster img{width:min(88%,380px)}}
+.hero{min-height:100svh}.watch .video-grid{align-items:stretch}.watch .video-card{height:100%}.contact h2 em{color:var(--blue);font-weight:400}.contact-email{display:inline-block;margin-top:1rem;font:.78rem var(--mono);letter-spacing:.04em;text-underline-offset:.28em}
